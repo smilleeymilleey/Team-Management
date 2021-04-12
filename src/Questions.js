@@ -1,7 +1,7 @@
 // arrays to put into inquirer
 // Array to selcect which job you're looking for 
 
-menuArray = [
+const menuArray = [
     {
       type: "list",
       name: "add",
@@ -11,7 +11,7 @@ menuArray = [
   ];
   
 // questions for engineers 
-  engineerArray = [
+  const engineerArray = [
     {
       type: "input",
       name: "name",
@@ -36,7 +36,7 @@ menuArray = [
 
 // questions for managers
 
-  managerArray = [
+  const managerArray = [
     {
       type: "input",
       name: "teamName",
@@ -65,7 +65,7 @@ menuArray = [
   ];
 
 //   questions for interns
-  internArray = [
+  const internArray = [
     {
       type: "input",
       name: "name",
@@ -88,4 +88,4 @@ menuArray = [
     },
   ];
 
-  module.exports = {menuArray, engineer, managerArray, internArray};
+  module.exports = {menuArray, engineerArray, managerArray, internArray};
