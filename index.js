@@ -63,8 +63,7 @@ function runNewInternData(){
 
 
 function runNewEngineerData(){
-    inquirer.prompt([...engquestions])
-    .then((data)=>{
+    inquirer.prompt([...engquestions]).then((data)=>{
         let newEngineer = new Engineer (data.name, data.id, data.email, data.github)
         employees.push(newEngineer)
         console.log('-------\nAdded: ' + newEngineer.name + '\n----')
@@ -74,6 +73,11 @@ function runNewEngineerData(){
 
 }
 
+function showMenu(manager) {
+    inquirer.prompt(menuArray).then((data) => {
+        console.log(data, manager)
+    })
+}
 
 
 
