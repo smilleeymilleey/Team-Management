@@ -66,8 +66,8 @@ function runNewEngineerData(){
     inquirer.prompt([...engquestions])
     .then((data)=>{
         let newEngineer = new Engineer (data.name, data.id, data.email, data.github)
-        employees.push(addedEngineer)
-        console.log('-------\nAdded: ' + addedEngineer.name + '\n----')
+        employees.push(newEngineer)
+        console.log('-------\nAdded: ' + newEngineer.name + '\n----')
         
         return newEngineer
     })
