@@ -23,9 +23,27 @@
                 //exit application
 
      
+const inquirer = require("inquirer"); 
+const fs = require("fs");
+
+const arrayOfQuestions = ('./src/QuestionArray');
+const Engineer = require("./lib/Engineer");
+const Manager = require("./lib/Manager");
+const Intern = require("./lib/Intern");
+const array = require('./src/Qustions');
+let newEngineer = [];
+let newIntern = [];
 
 
+runManagerData();
+function runManagerData(){
+    inquirer.prompt(array.managerArray).then => {
+        const manager = new Manager (data.name, data.id, data.email, data.number, data.teamName);
+    }
 
+    manager.getRole();
+    console.log(`${manager.teamName}`);
+}
 
 
 
