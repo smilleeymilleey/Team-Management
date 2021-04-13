@@ -27,7 +27,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const questions = require('./src/Questions.js');
 const createHTML = require('./src/createHTML');
-const {menuArray, engineer, managerArray, internArray} = require('./src/Questions.js');
+const {menuArray, engineerArray, managerArray, internArray} = require('./src/Questions.js');
 const Engineer = require("./lib/Engineer");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
@@ -66,7 +66,7 @@ function runNewInternData(){
 
 
 function runNewEngineerData(){
-    inquirer.prompt([...engquestions]).then((data)=>{
+    inquirer.prompt(engineerArray).then((data)=>{
         let newEngineer = new Engineer (data.name, data.id, data.email, data.github)
         employees.push(newEngineer)
         console.log('-------\nAdded: ' + newEngineer.name + '\n----')
@@ -95,10 +95,10 @@ function buildTeam() {
     .then((data) => {
         console.log(data)
         switch (data.team) {
-            case 'Add an Intern':
+            case 'Add Intern':
                 runNewInternData();
                 break;
-            case 'Add an Engineer':
+            case 'Add Engineer':
                 runNewEngineerData();
                 break;
             case "Im done creating my team":
