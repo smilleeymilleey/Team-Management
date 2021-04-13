@@ -1,7 +1,7 @@
 function fillCards(text) {
 
     let sections = ' '
-    let employeesArray = info
+    let employeesArray = text;
     console.log(employeesArray)
     employeesArray.forEach(employee => {
         

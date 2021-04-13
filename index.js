@@ -25,7 +25,8 @@
      
 const inquirer = require("inquirer"); 
 const fs = require("fs");
-
+const questions = require('./src/Questions.js');
+const createHTML = require('./src/createHTML');
 const {menuArray, engineer, managerArray, internArray} = require('./src/Questions.js');
 const Engineer = require("./lib/Engineer");
 const Manager = require("./lib/Manager");
@@ -33,7 +34,7 @@ const Intern = require("./lib/Intern");
 
 let employees= []
 
-console.log("Hello world")
+
 console.log(managerArray)
 
 
@@ -100,6 +101,8 @@ function buildTeam() {
             case 'Add an Engineer':
                 runNewEngineerData();
                 break;
+            case "Im done creating my team":
+                write(employees);
             default:
                 break;
 
@@ -111,8 +114,14 @@ function buildTeam() {
     
 }
 
-const index = `../dist/index.html`
-writeToFile(index, data);
+function write(data) {
+const index = `./dist/index.html`
+fs.writeFile(index, createHTML(data), (err) =>
+err ? console.error(err) : console.log("it works!")
+);
+}
+
 
 runNewManagerData();
+
 
