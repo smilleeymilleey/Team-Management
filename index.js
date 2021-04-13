@@ -111,5 +111,8 @@ function buildTeam() {
     
 }
 
+const index = `../dist/index.html`
+writeToFile(index, data);
+
 runNewManagerData();
 
