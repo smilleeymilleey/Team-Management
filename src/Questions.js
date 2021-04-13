@@ -1,6 +1,6 @@
 // arrays to put into inquirer
 // Array to selcect which job you're looking for 
-
+const newHTML = require('./createHTML');
 const menuArray = [
     {
       type: "list",
@@ -88,4 +88,11 @@ const menuArray = [
     },
   ];
 
+  function writeToHTML(filename, data) {
+   
+      false.writeFile(filename, newHTML(data), (err) => 
+        err ? console.error(err) : console.log("it works")
+      )
+    }
+  
   module.exports = {menuArray, engineerArray, managerArray, internArray};
