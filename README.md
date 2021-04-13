@@ -57,7 +57,7 @@ This is a project for managing teams!
 
 Team manager
 
-<img src="./pic.png">
+<img src="./pic.PNG">
 
  I wanted to create the best project manager! 
 
