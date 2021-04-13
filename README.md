@@ -3,8 +3,11 @@
 
 This is a project for managing teams! 
 
-DEMO: https://youtu.be/A696409H6Vk 
-Deployed Link: 
+###DEMO: https://youtu.be/A696409H6Vk 
+
+
+
+###Deployed Link: https://smilleeymilleey.github.io/team_management/dist/index.html
 
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
