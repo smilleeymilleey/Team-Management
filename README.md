@@ -34,7 +34,7 @@ This is a project for managing teams!
 <br />
 <p align="center">
  
-  <h3 align="center">Artopolis</h3>
+  <h3 align="center">Team Profile Manager</h3>
 
  </p>
 
